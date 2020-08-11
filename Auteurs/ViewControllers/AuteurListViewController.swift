@@ -35,9 +35,14 @@ class AuteurListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 34, weight: .bold)]
+    navigationController?.navigationBar.largeTitleTextAttributes = [
+      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 34, weight: .bold)
+    ]
+    
     navigationItem.largeTitleDisplayMode = .automatic
-
+    
+    // Let the table view estimate the row height.
+    // The estimated row height is still needed to be declared in order for the tableview to know what size to start with.
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 600
   }
@@ -56,26 +61,27 @@ extension AuteurListViewController: UITableViewDataSource {
   }
  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AuteurTableViewCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? AuteurTableViewCell else {
+      fatalError("Unable to Dequeue Cell.")
+    }
     let auteur = auteurs[indexPath.row]
-    cell.selectionStyle = .none
-
     
-    cell.bioLabel.text = auteur.bio
-    cell.bioLabel.textColor = UIColor(displayP3Red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
-
     cell.auteurImageView.image = UIImage(named: auteur.image)
     cell.auteurImageView.layer.cornerRadius = cell.auteurImageView.frame.size.width / 2
-
+    
     cell.nameLabel.text = auteur.name
     cell.nameLabel.textColor = .white
     cell.nameLabel.textAlignment = .center
-
-    cell.source.text = auteur.source
-    cell.source.textColor = UIColor(displayP3Red: 0.74, green: 0.74, blue: 0.74, alpha: 1.0)
-    cell.source.font = UIFont.italicSystemFont(ofSize: cell.source.font.pointSize)
-
-
+    
+    cell.bioLabel.text = auteur.bio
+    cell.bioLabel.textColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
+    
+    cell.sourceLabel.text = auteur.source
+    cell.sourceLabel.textColor = UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1.0)
+    cell.sourceLabel.font = UIFont.italicSystemFont(ofSize: cell.sourceLabel.font.pointSize)
+    
+    cell.selectionStyle = .none
+    
     return cell
   }
 }
