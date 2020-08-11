@@ -34,15 +34,15 @@
                                                         <constraint firstAttribute="height" constant="300" id="OTR-Lh-BbE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6G-UR-OKG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6G-UR-OKG">
                                                     <rect key="frame" x="8" y="319" width="359" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="rw-light"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-nL-lXd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-nL-lXd">
                                                     <rect key="frame" x="8" y="347.5" width="359" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -113,13 +113,49 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="3Ce-aC-g9C">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="3Ce-aC-g9C" customClass="AuteurDetailTableViewCell" customModule="Auteurs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ce-aC-g9C" id="ymb-kp-wET">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-LP-6Yt">
+                                                    <rect key="frame" x="23" y="11" width="329" height="203.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YF-vx-E5a">
+                                                    <rect key="frame" x="23" y="222.5" width="329" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="rw-light"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Tap For Details &gt;" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Pt-fq-67M">
+                                                    <rect key="frame" x="23" y="251" width="329" height="38"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9YF-vx-E5a" firstAttribute="width" secondItem="YTm-LP-6Yt" secondAttribute="width" id="55J-S6-gCb"/>
+                                                <constraint firstItem="YTm-LP-6Yt" firstAttribute="leading" secondItem="ymb-kp-wET" secondAttribute="leadingMargin" constant="8" id="7QB-DU-Sfk"/>
+                                                <constraint firstItem="9Pt-fq-67M" firstAttribute="bottom" secondItem="ymb-kp-wET" secondAttribute="bottomMargin" id="Bka-FT-NtJ"/>
+                                                <constraint firstItem="9Pt-fq-67M" firstAttribute="leading" secondItem="ymb-kp-wET" secondAttribute="leadingMargin" constant="8" id="Fvp-tL-dOf"/>
+                                                <constraint firstItem="9YF-vx-E5a" firstAttribute="top" secondItem="YTm-LP-6Yt" secondAttribute="bottom" constant="8" id="JDJ-rK-VkS"/>
+                                                <constraint firstItem="9YF-vx-E5a" firstAttribute="centerX" secondItem="ymb-kp-wET" secondAttribute="centerX" id="b2f-ca-kY0"/>
+                                                <constraint firstItem="YTm-LP-6Yt" firstAttribute="top" secondItem="ymb-kp-wET" secondAttribute="topMargin" id="k3O-An-Ch5"/>
+                                                <constraint firstItem="9Pt-fq-67M" firstAttribute="top" secondItem="9YF-vx-E5a" secondAttribute="bottom" constant="8" id="mS1-EM-6YD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YTm-LP-6Yt" secondAttribute="trailing" constant="8" id="qMf-f8-T1j"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9Pt-fq-67M" secondAttribute="trailing" constant="8" id="vSm-pe-IGK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="filmImageView" destination="YTm-LP-6Yt" id="5zr-ZG-PJF"/>
+                                            <outlet property="filmTitleLabel" destination="9YF-vx-E5a" id="njU-b3-xOs"/>
+                                            <outlet property="moreInfotextView" destination="9Pt-fq-67M" id="2zP-tZ-939"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -143,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ika-1d-Cd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2866" y="-115"/>
+            <point key="canvasLocation" x="2864.8000000000002" y="-115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E9L-0G-hlV">
