@@ -21,10 +21,12 @@
 		AEF6FD6423F0CE9C00225D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF6FD5D23F0CE9C00225D56 /* Main.storyboard */; };
 		E1CF827124E32C230041838D /* AuteurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CF827024E32C230041838D /* AuteurTableViewCell.swift */; };
 		E1CF827324E342EF0041838D /* AuteurDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CF827224E342EF0041838D /* AuteurDetailTableViewCell.swift */; };
+		E1CF827624E35FDE0041838D /* AuteurTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CF827524E35FDE0041838D /* AuteurTableView.swift */; };
+		E1CF827824E366A00041838D /* AuteurDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CF827724E366A00041838D /* AuteurDetailTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18D775BD22AD944300AE281E /* Auteurs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auteurs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D775BD22AD944300AE281E /* Auteurs2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auteurs2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D775C022AD944300AE281E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D775C222AD944300AE281E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18D775C422AD944300AE281E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		AEF6FD5D23F0CE9C00225D56 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E1CF827024E32C230041838D /* AuteurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuteurTableViewCell.swift; sourceTree = "<group>"; };
 		E1CF827224E342EF0041838D /* AuteurDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuteurDetailTableViewCell.swift; sourceTree = "<group>"; };
+		E1CF827524E35FDE0041838D /* AuteurTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuteurTableView.swift; sourceTree = "<group>"; };
+		E1CF827724E366A00041838D /* AuteurDetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuteurDetailTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,7 @@
 		18D775BE22AD944300AE281E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18D775BD22AD944300AE281E /* Auteurs.app */,
+				18D775BD22AD944300AE281E /* Auteurs2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +76,7 @@
 		18D775BF22AD944300AE281E /* Auteurs */ = {
 			isa = PBXGroup;
 			children = (
+				E1CF827424E35FC20041838D /* SwiftUi */,
 				AEF6FD5723F0CE9C00225D56 /* Models */,
 				AEF6FD5523F0CE9C00225D56 /* Resources */,
 				AEF6FD5223F0CE9C00225D56 /* ViewControllers */,
@@ -131,6 +136,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E1CF827424E35FC20041838D /* SwiftUi */ = {
+			isa = PBXGroup;
+			children = (
+				E1CF827524E35FDE0041838D /* AuteurTableView.swift */,
+				E1CF827724E366A00041838D /* AuteurDetailTableView.swift */,
+			);
+			path = SwiftUi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,7 +162,7 @@
 			);
 			name = Auteurs;
 			productName = MyRWTutorial;
-			productReference = 18D775BD22AD944300AE281E /* Auteurs.app */;
+			productReference = 18D775BD22AD944300AE281E /* Auteurs2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,8 +223,10 @@
 				AEF6FD6123F0CE9C00225D56 /* Film.swift in Sources */,
 				AEF6FD5F23F0CE9C00225D56 /* AuteurListViewController.swift in Sources */,
 				E1CF827324E342EF0041838D /* AuteurDetailTableViewCell.swift in Sources */,
+				E1CF827624E35FDE0041838D /* AuteurTableView.swift in Sources */,
 				18D775C322AD944300AE281E /* SceneDelegate.swift in Sources */,
 				E1CF827124E32C230041838D /* AuteurTableViewCell.swift in Sources */,
+				E1CF827824E366A00041838D /* AuteurDetailTableView.swift in Sources */,
 				AEF6FD5E23F0CE9C00225D56 /* AuteurDetailViewController.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 			);
@@ -358,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.auteurs;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Auteurs2;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.auteurs;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Auteurs2;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
